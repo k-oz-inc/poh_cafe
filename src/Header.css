@@ -1,0 +1,70 @@
+
+.logo {
+    max-height: 176px;
+    max-width: auto;
+}
+
+.slogan {
+    color: white;
+}
+
+.info_card {
+    color: white;
+    position: absolute;
+    z-index: 5;
+    width: 50%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 440px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.15);
+    background-color: #242E3E;
+    max-width: 325px;
+    border-radius: 20px;
+}
+
+.social_icon {
+    font-size: 1.5rem;
+    padding: 10px 10px 0 10px;
+}
+
+.navbar-dark {
+    background-color: rgba(36, 46, 62, 1);
+}
+
+.navbar-nav > a{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+.jumbotron {
+    position: relative;
+    background-image: url('./images/mike-kenneally-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
+
+/* Jumbotrom overlay */
+.jumbotron > .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.jumbotron > .inner {
+    position: relative;
+    z-index: 2;
+}
+/* --End of overlay-- */
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}

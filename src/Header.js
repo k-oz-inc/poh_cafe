@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import logo from './images/PoH_Logo.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   Collapse,
@@ -8,11 +9,13 @@ import {
   NavItem,
   NavLink,
   Jumbotron,
-  // Container,
-  // Row,
-  // Col,
-  // Button
+Container,
+Row,
+Col,
+// Button
 } from 'reactstrap';
+import './Header.css';
+
 
 
 // function Header() {
@@ -42,45 +45,50 @@ class Header extends Component {
     render() {
         return (
           <React.Fragment>
-              <Jumbotron fluid>
-                  <div className="container">
-                      <div className="row">
-                          <div className="col">
-                              <h1>Logo</h1>
-                              <h2>Slogan Here</h2>
-                          </div>
-                      </div>
-                  </div>
-              </Jumbotron>
-              <Navbar dark sticky="top" expand="md">
-                <div className="container">
-                    <NavbarToggler onClick={this.toggleNav} />
-                    <Collapse isOpen={this.state.isNavOpen} navbar>
-                        <Nav navbar>
-                            <NavItem>
-                                <NavLink className="nav-link" to="/home">
-                                    Home
-                                </NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className="nav-link" to="/menu">
-                                  Menu
-                                </NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className="nav-link" to="/shop">
-                                  Shop
-                                </NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className="nav-link" to="/contactus">
-                                  Contact Us
-                                </NavLink>
-                            </NavItem>
-                        </Nav>
-                    </Collapse>
-                </div>
-              </Navbar>
+                <Jumbotron className="jumbotron" fluid>
+                    <div className="overlay">
+                    <Navbar dark className="navbar-nav navbar-dark" fixed="top" expand="md">
+                        <div className="container">
+                            <NavbarToggler onClick={this.toggleNav} />
+                            <Collapse isOpen={this.state.isNavOpen} navbar>
+                                <Nav navbar className="align-items-center">
+                                    <NavItem>
+                                        <NavLink active className="nav-link" to="/home">
+                                        Home
+                                        </NavLink>
+                                    </NavItem>
+                                    <NavItem>
+                                        <NavLink className="nav-link" to="/menu">
+                                        Menu
+                                        </NavLink>
+                                    </NavItem>
+                                    <NavItem>
+                                        <NavLink className="nav-link" to="/shop">
+                                        Shop
+                                        </NavLink>
+                                    </NavItem>
+                                    <NavItem>
+                                        <NavLink className="nav-link" to="/contactus">
+                                        Contact Us
+                                        </NavLink>
+                                    </NavItem>
+                                </Nav>
+                            </Collapse>
+                        </div>
+                    </Navbar>
+
+                    <Container>
+                        <Row>
+                            <Col xs={12}>
+                                <img className="logo center" src={logo} alt="PoH Cafe Logo" />
+                            </Col>
+                            <Col xs={12}>
+                                <h2 className="slogan center">It's a Taste of Heaven!</h2>
+                            </Col>
+                        </Row>
+                    </Container>
+                    </div>
+                </Jumbotron>
           </React.Fragment>
         );
     }
