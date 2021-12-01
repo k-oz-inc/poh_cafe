@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './images/PoH_Logo.png'
+import logo from './images/PoH_Logo.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   Collapse,
@@ -97,7 +97,8 @@ class Header extends Component {
                         <Col className="col-12 center">1155 Heavenly Drive</Col>
                         <Col className="col-12 center">New York, NY</Col>
                         <Col className="col-12 center">Tel. 212-555-5555</Col>
-                        <Col>    
+                        <Col className="center">
+                            <a href="#" alt="Instagram Link Icon" target="_blank"><i className="fab fa-instagram social_icon"></i></a>    
                             <a href="#" alt="Facebook Link Icon" target="_blank"><i className="fab fa-facebook social_icon"></i></a>
                             <a href="#" alt="Twitter Link Icon" target="_blank"><i className="fab fa-twitter social_icon"></i></a>
                         </Col>
