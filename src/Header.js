@@ -46,7 +46,7 @@ class Header extends Component {
         return (
           <React.Fragment>
                 <Jumbotron className="jumbotron" fluid>
-                    <div className="overlay">
+                    
                     <Navbar dark className="navbar-nav navbar-dark" fixed="top" expand="md">
                         <div className="container">
                             <NavbarToggler onClick={this.toggleNav} />
@@ -76,19 +76,33 @@ class Header extends Component {
                             </Collapse>
                         </div>
                     </Navbar>
-
+                    <div className="overlay">
                     <Container>
                         <Row>
-                            <Col xs={12}>
-                                <img className="logo center" src={logo} alt="PoH Cafe Logo" />
+                            <Col className="d-flex justify-content-center">
+                                <img className="logo img-fluid" src={logo} alt="PoH Cafe Logo" />
                             </Col>
-                            <Col xs={12}>
-                                <h2 className="slogan center">It's a Taste of Heaven!</h2>
+                            <Col className="col-12">
+                                <h2 className="slogan center mt-2">It's a Taste of Heaven!</h2>
                             </Col>
                         </Row>
                     </Container>
                     </div>
                 </Jumbotron>
+                <Container className="d-none d-lg-block info_card pb-2">
+                    <Row className="">
+                        <Col className="col-12 center">
+                            <a href="#"><i className="fas fa-map-marker-alt social_icon"></i></a>
+                        </Col>
+                        <Col className="col-12 center">1155 Heavenly Drive</Col>
+                        <Col className="col-12 center">New York, NY</Col>
+                        <Col className="col-12 center">Tel. 212-555-5555</Col>
+                        <Col>    
+                            <a href="#" alt="Facebook Link Icon" target="_blank"><i className="fab fa-facebook social_icon"></i></a>
+                            <a href="#" alt="Twitter Link Icon" target="_blank"><i className="fab fa-twitter social_icon"></i></a>
+                        </Col>
+                    </Row>
+                </Container>
           </React.Fragment>
         );
     }
