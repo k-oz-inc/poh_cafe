@@ -1,0 +1,47 @@
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.main_color {
+    color: #242E3E;
+}
+
+.second_color {
+    color: #E1AC66;
+}
+
+.third_color {
+    color: #EE6A59;
+}
+
+.main_bg {
+    background-color: #242E3E;
+}
+
+.second_bg {
+    background-color: #E1AC66;
+}
+
+.third_bg {
+    background-color: #EE6A59;
+}
+
+footer {
+    width: 100%;
+    height: 325px;
+    background-color: #EE6A59;
+}
+
+.footer_logo {
+    max-height: 116px;
+    max-width: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.footer_links {
+    color: white;
+}

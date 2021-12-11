@@ -16,14 +16,6 @@ Col,
 } from 'reactstrap';
 import './Header.css';
 
-
-
-// function Header() {
-//   return (
-//     <h1>Poh Cafe</h1>
-//   );
-// }
-
 class Header extends Component {
     constructor(props) {
         super(props);
@@ -48,32 +40,36 @@ class Header extends Component {
                 <Jumbotron className="jumbotron" fluid>
                     
                     <Navbar dark className="navbar-nav navbar-dark" fixed="top" expand="md">
-                        <div className="container">
-                            <NavbarToggler onClick={this.toggleNav} />
-                            <Collapse isOpen={this.state.isNavOpen} navbar>
-                                <Nav navbar className="align-items-center">
-                                    <NavItem>
-                                        <NavLink active className="nav-link" to="/home">
-                                        Home
-                                        </NavLink>
-                                    </NavItem>
-                                    <NavItem>
-                                        <NavLink className="nav-link" to="/menu">
-                                        Menu
-                                        </NavLink>
-                                    </NavItem>
-                                    <NavItem>
-                                        <NavLink className="nav-link" to="/shop">
-                                        Shop
-                                        </NavLink>
-                                    </NavItem>
-                                    <NavItem>
-                                        <NavLink className="nav-link" to="/contactus">
-                                        Contact Us
-                                        </NavLink>
-                                    </NavItem>
-                                </Nav>
-                            </Collapse>
+                        <div className="container d-flex justify-content-around">
+                            <div className="row">
+                                <div className="col-12">
+                                <NavbarToggler onClick={this.toggleNav} />
+                                    <Collapse isOpen={this.state.isNavOpen} navbar>
+                                        <Nav navbar className="align-items-center">
+                                            <NavItem>
+                                                <NavLink active className="nav-link m-2" to="/home">
+                                                Home
+                                                </NavLink>
+                                            </NavItem>
+                                            <NavItem>
+                                                <NavLink className="nav-link m-2" to="/menu">
+                                                Menu
+                                                </NavLink>
+                                            </NavItem>
+                                            <NavItem>
+                                                <NavLink className="nav-link m-2" to="/shop">
+                                                Shop
+                                                </NavLink>
+                                            </NavItem>
+                                            <NavItem>
+                                                <NavLink className="nav-link m-2" to="/contactus">
+                                                Contact Us
+                                                </NavLink>
+                                            </NavItem>
+                                        </Nav>
+                                    </Collapse>
+                                </div>
+                            </div>
                         </div>
                     </Navbar>
                     <div className="overlay">
