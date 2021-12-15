@@ -1,10 +1,18 @@
 import React from 'react';
+import Home from './Home';
+import Menu from './Menu';
+import Shop from './Shop';
+import Contact from './Contact';
 
 function Main() {
     return (
-      <section>
-        <p>The body information goes here</p>
-      </section>
+      <>
+        <p>MAIN COMPONENT: The body information goes here</p>
+        <Home />
+        <Menu />
+        <Shop />
+        <Contact />
+      </>
     );
   }
 

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './Shop.css';
+import './Contact.css';
 
 
-class Shop extends Component {
+class Contact extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -13,10 +13,10 @@ class Shop extends Component {
     render() {
         return (
             <>
-                <br /><h3 className="center">This is the shop component</h3>
+                <br /><h4 className="center">This is the Contact component</h4>
             </>
         );
     }
 }
 
-export default Shop;
+export default Contact;

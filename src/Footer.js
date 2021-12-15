@@ -11,7 +11,7 @@ import './Footer.css';
 
 function Footer() {
     return (
-      <footer className="fixed-bottom">
+      <footer className="">
         <Container fluid className="">
           <Row>
             <Col className="main_bg">
