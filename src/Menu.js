@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import menuImage1 from './images/toa-heftiba-unsplash.jpg';
-import { Collapse } from 'reactstrap';
+import { Collapse, Card, CardBody } from 'reactstrap';
 import './Menu.css';
 
 
@@ -25,41 +25,43 @@ class Menu extends Component {
                                 <span id="arrow">➤</span> Cras justo odio
                                 </a>
                                 <Collapse className="collapse" id="collapseItem1">
-                                <div className="card card-body bg-transparent">
+                                <Card>   
+                                <CardBody className="bg-transparent">
                                     <img className="menu_thumbnail  d-none d-lg-block border_radius_thumbnail" src={menuImage1} alt="Breakfast Thumbnail" />
-                                </div>
+                                </CardBody>
+                                </Card> 
                                 </Collapse>
-                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <div className="col-6 col-lg-8 center"><small className="flex d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
                                 <span className="badge">$14</span>
                             </li>
                             <li className="list-group-item d-flex justify-content-between bg-transparent">
                                 Dapibus ac facilisis in
-                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <div className="col-6 col-lg-8 center"><small className="flex d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
                                 <span className="badge">$11</span>
                             </li>
                             <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
                                 Morbi leo risus
-                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <div className="col-6 col-lg-8 center"><small className="flex d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
                                 <span className="badge">$13</span>
                             </li>
                             <li className="list-group-item d-flex justify-content-between bg-transparent">
                                 Porta ac consectetur ac
-                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <div className="col-6 col-lg-8 center"><small className="flex d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
                                 <span className="badge">$9</span>
                             </li>
                             <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
                                 Vestibulum at eros
-                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <div className="col-6 col-lg-8 center"><small className="flex d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
                                 <span className="badge">$10</span>
                             </li>
                             <li className="list-group-item d-flex justify-content-between bg-transparent">
                                 Porta ac consectetur ac
-                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <div className="col-6 col-lg-8 center"><small className="flex d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
                                 <span className="badge">$11</span>
                             </li>
                             <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
                                 Vestibulum at eros
-                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <div className="col-6 col-lg-8 center"><small className="flex d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
                                 <span className="badge">$9</span>
                             </li>
                         </ul>
@@ -70,37 +72,37 @@ class Menu extends Component {
                         <ul className="list-group list-group-flush bg-transparent">
                             <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
                                 Cras justo odio
-                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <div className="col-6 col-lg-8 center"><small className="flex d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
                                 <span className="badge">$7</span>
                             </li>
                             <li className="list-group-item d-flex justify-content-between bg-transparent">
                                 Dapibus ac facilisis in
-                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <div className="col-6 col-lg-8 center"><small className="flex d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
                                 <span className="badge">$13</span>
                             </li>
                             <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
                                 Morbi leo risus
-                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <div className="col-6 col-lg-8 center"><small className="flex d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
                                 <span className="badge">$8</span>
                             </li>
                             <li className="list-group-item d-flex justify-content-between bg-transparent">
                                 Porta ac consectetur ac
-                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <div className="col-6 col-lg-8 center"><small className="flex d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
                                 <span className="badge">$11</span>
                             </li>
                             <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
                                 Vestibulum at eros
-                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <div className="col-6 col-lg-8 center"><small className="flex d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
                                 <span className="badge">$9</span>
                             </li>
                             <li className="list-group-item d-flex justify-content-between bg-transparent">
                                 Porta ac consectetur ac
-                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <div className="col-6 col-lg-8 center"><small className="flex d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
                                 <span className="badge">$11</span>
                             </li>
                             <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
                                 Vestibulum at eros
-                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <div className="col-6 col-lg-8 center"><small className="flex d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
                                 <span className="badge">$9</span>
                             </li>
                         </ul>
@@ -111,47 +113,47 @@ class Menu extends Component {
                             <ul className="list-group list-group-flush bg-transparent">
                                 <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
                                 Cras justo odio
-                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <div className="col-6 col-lg-8 center"><small className="flex d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
                                 <span className="badge">$14</span>
                                 </li>
                                 <li className="list-group-item d-flex justify-content-between bg-transparent">
                                 Dapibus ac facilisis in
-                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <div className="col-6 col-lg-8 center"><small className="flex d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
                                 <span className="badge">$11</span>
                                 </li>
                                 <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
                                 Morbi leo risus
-                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <div className="col-6 col-lg-8 center"><small className="flex d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
                                 <span className="badge">$13</span>
                                 </li>
                                 <li className="list-group-item d-flex justify-content-between bg-transparent">
                                 Porta ac consectetur ac
-                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <div className="col-6 col-lg-8 center"><small className="flex d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
                                 <span className="badge">$9</span>
                                 </li>
                                 <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
                                 Vestibulum at eros
-                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <div className="col-6 col-lg-8 center"><small className="flex d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
                                 <span className="badge">$7</span>
                                 </li>
                                 <li className="list-group-item d-flex justify-content-between bg-transparent">
                                 Cras justo odio
-                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <div className="col-6 col-lg-8 center"><small className="flex d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
                                 <span className="badge">$13</span>
                                 </li>
                                 <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
                                 Dapibus ac facilisis in
-                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <div className="col-6 col-lg-8 center"><small className="flex d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
                                 <span className="badge">$11</span>
                                 </li>
                                 <li className="list-group-item d-flex justify-content-between bg-transparent">
                                 Morbi leo risus
-                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <div className="col-6 col-lg-8 center"><small className="flex d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
                                 <span className="badge">$7</span>
                                 </li>
                                 <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
                                 Vestibulum at eros
-                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <div className="col-6 col-lg-8 center"><small className="flex d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
                                 <span className="badge">$11</span>
                                 </li>
                             </ul>
@@ -162,27 +164,27 @@ class Menu extends Component {
                         <ul className="list-group list-group-flush bg-transparent">
                             <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
                                 Cras justo odio
-                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <div className="col-6 col-lg-8 center"><small className="flex d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
                                 <span className="badge">$9</span>
                             </li>
                             <li className="list-group-item d-flex justify-content-between bg-transparent">
                                 Dapibus ac facilisis in
-                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <div className="col-6 col-lg-8 center"><small className="flex d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
                                 <span className="badge">$11</span>
                             </li>
                             <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
                                 Morbi leo risus
-                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <div className="col-6 col-lg-8 center"><small className="flex d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
                                 <span className="badge">$8</span>
                             </li>
                             <li className="list-group-item d-flex justify-content-between bg-transparent">
                                 Porta ac consectetur ac
-                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <div className="col-6 col-lg-8 center"><small className="flex d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
                                 <span className="badge">$10</span>
                             </li>
                             <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
                                 Vestibulum at eros
-                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <div className="col-6 col-lg-8 center"><small className="flex d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
                                 <span className="badge">$7</span>
                             </li>
                         </ul>
