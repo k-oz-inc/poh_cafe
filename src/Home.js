@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import './Home.css';
 import {
-Collapse,
-Carousel,    
 Container,
 Row,
 Col,
-// Button
+Button,
+Collapse,
+Carousel,
+CarouselItem,
+CarouselControl,
+CarouselIndicators,
+CarouselCaption
 } from 'reactstrap';
 import aboutImage from './images/nathan-dumlao-unsplash2.jpg';
 import carouselImage1 from './images/artem-maltsev-unsplash.jpg';
@@ -15,101 +19,130 @@ import carouselImage3 from './images/carissa-gan-unsplash.jpg';
 import carouselImage4 from './images/christine-von-unsplash.jpg';
 import carouselImage5 from './images/toa-heftiba-unsplash.jpg';
 
+//Carousel by @bit with some slight modifications
+const items = [
+	{
+		src: carouselImage1,
+		caption: 'Slide 1',
+        altText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima adipisci hic repudiandae officia! Soluta tenetur omnis dignissimos voluptate consequatur.'
+	},
+	{
+		src: carouselImage2,
+		caption: 'Slide 2',
+        altText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima adipisci hic repudiandae officia! Soluta tenetur omnis dignissimos voluptate consequatur.',
+	},
+	{
+		src: carouselImage3,
+		caption: 'Slide 3',
+        altText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima adipisci hic repudiandae officia! Soluta tenetur omnis dignissimos voluptate consequatur.',
+	},
+	{
+		src: carouselImage4,
+		caption: 'Slide 4',
+        altText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima adipisci hic repudiandae officia! Soluta tenetur omnis dignissimos voluptate consequatur.',
+	},
+	{
+		src: carouselImage5,
+		caption: 'Slide 5',
+        altText: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima adipisci hic repudiandae officia! Soluta tenetur omnis dignissimos voluptate consequatur.',
+	}
+];
 
 class Home extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            
-        }
-    }
+		this.state = { activeIndex: 0 };
+		this.next = this.next.bind(this);
+		this.previous = this.previous.bind(this);
+		this.goToIndex = this.goToIndex.bind(this);
+		this.onExiting = this.onExiting.bind(this);
+		this.onExited = this.onExited.bind(this);
+	}
+
+    onExiting() {
+		this.animating = true;
+	}
+
+	onExited() {
+		this.animating = false;
+	}
+
+	next() {
+		if (this.animating) return;
+		const nextIndex = this.state.activeIndex === items.length - 1 ? 0 : this.state.activeIndex + 1;
+		this.setState({ activeIndex: nextIndex });
+	}
+
+    previous() {
+		if (this.animating) return;
+		const nextIndex = this.state.activeIndex === 0 ? items.length - 1 : this.state.activeIndex - 1;
+		this.setState({ activeIndex: nextIndex });
+	}
+
+	goToIndex(newIndex) {
+		if (this.animating) return;
+		this.setState({ activeIndex: newIndex });
+	}
 
     render() {
+
+		const { activeIndex } = this.state;
+
+		const slides = items.map((item) => {
+			return (
+				<CarouselItem
+					onExiting={this.onExiting}
+					onExited={this.onExited}
+					key={item.src}
+				>
+					<img className="d-block w-100" src={item.src} alt={item.altText} />
+					<CarouselCaption className="caption_bg" captionHeader={item.caption} captionText={item.altText}  />
+				</CarouselItem>
+			);
+		});
+
         return (
             <>
-                <br /><h1 className="center">This is the home component</h1>
-                <div className="container">
-                    <div className="row d-flex align-items-center m-0 second_bg border_radius_both box_shadow">
-                        <div className="col-lg-6 order-md-2 border_radius_left main_color">
-                        <h3 className="mt-2 mt-md-6 pt-4 pt-lg-0">About Us</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima adipisci hic repudiandae officia! Soluta tenetur omnis dignissimos voluptate consequatur. Non perspiciatis pariatur ipsa ipsum saepe eligendi omnis unde officiis, culpa, soluta neque commodi consectetur. Dicta id, nulla impedit accusantium nobis obcaecati ipsum iure quae rerum, illo omnis nesciunt eum neque repellendus reprehenderit, saepe vero ducimus.</p>
-                        </div>
-                        <div className="col-lg-6 p-0 d-none d-lg-block order-md-1">
-                        <img className="image border_radius_left" src={aboutImage} alt="About Us Image" />
-                        </div>
+                <Container>
+                    <div>
+                        <Row className="row d-flex align-items-center m-0 second_bg border_radius_both box_shadow">
+                            <Col className="col-lg-6 order-md-2 border_radius_left">
+                                <h3 className="mt-2 mt-md-6 pt-4 pt-lg-0">About Us</h3>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima adipisci hic repudiandae officia! Soluta tenetur omnis dignissimos voluptate consequatur. Non perspiciatis pariatur ipsa ipsum saepe eligendi omnis unde officiis, culpa, soluta neque commodi consectetur. Dicta id, nulla impedit accusantium nobis obcaecati ipsum iure quae rerum, illo omnis nesciunt eum neque repellendus reprehenderit, saepe vero ducimus.</p>
+                            </Col>
+                            <Col className="col-lg-6 p-0 d-none d-lg-block order-md-1">
+                                <img className="image border_radius_left" src={aboutImage} alt="About Us Image" />
+                            </Col>
+                        </Row>
                     </div>
-                </div>
 
-                <div className="container bottom_spacing">
-                    <div id="featured" className="carousel slide box_shadow" data-ride="carousel">
-                        <ol className="carousel-indicators">
-                        <li data-target="#featured" data-slide-to="0" className="active"></li>
-                        <li data-target="#featured" data-slide-to="1"></li>
-                        <li data-target="#featured" data-slide-to="2"></li>
-                        <li data-target="#featured" data-slide-to="3"></li>
-                        <li data-target="#featured" data-slide-to="4"></li>
-                        </ol>
-                        <div className="carousel-inner">
-                        <div className="carousel-item active">
-                            <img className="d-block w-100" src={carouselImage1} alt="First slide" />
-                            <div className="carousel-caption d-none d-md-block caption_bg">
-                                <h5>Featured Item 1</h5>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur explicabo ea exercitationem obcaecati eveniet veniam voluptatibus quaerat rerum, dolore nulla, beatae quam aut excepturi. Nobis, itaque exercitationem! Cumque dolorum ad, alias aliquam quasi nam maxime perspiciatis modi asperiores rem ipsa.</p>
-                            </div>
-                        </div>
-                        <div className="carousel-item">
-                            <img className="d-block w-100" src={carouselImage2} alt="Second slide" />
-                            <div className="carousel-caption d-none d-md-block caption_bg">
-                                <h5>Featured Item 2</h5>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur explicabo ea exercitationem obcaecati eveniet veniam voluptatibus quaerat rerum, dolore nulla, beatae quam aut excepturi. Nobis, itaque exercitationem! Cumque dolorum ad, alias aliquam quasi nam maxime perspiciatis modi asperiores rem ipsa.</p>
-                            </div>
-                        </div>
-                        <div className="carousel-item">
-                            <img className="d-block w-100" src={carouselImage3} alt="Third slide" />
-                            <div className="carousel-caption d-none d-md-block caption_bg">
-                                <h5>Featured Item 3</h5>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur explicabo ea exercitationem obcaecati eveniet veniam voluptatibus quaerat rerum, dolore nulla, beatae quam aut excepturi. Nobis, itaque exercitationem! Cumque dolorum ad, alias aliquam quasi nam maxime perspiciatis modi asperiores rem ipsa.</p>
-                            </div>
-                        </div>
-                        <div className="carousel-item">
-                            <img className="d-block w-100" src={carouselImage4} alt="Third slide" />
-                            <div className="carousel-caption d-none d-md-block caption_bg">
-                                <h5>Featured Item 4</h5>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur explicabo ea exercitationem obcaecati eveniet veniam voluptatibus quaerat rerum, dolore nulla, beatae quam aut excepturi. Nobis, itaque exercitationem! Cumque dolorum ad, alias aliquam quasi nam maxime perspiciatis modi asperiores rem ipsa.</p>
-                            </div>
-                        </div>
-                        <div className="carousel-item">
-                            <img className="d-block w-100" src={carouselImage5} alt="Third slide" />
-                            <div className="carousel-caption d-none d-md-block caption_bg">
-                                <h5>Featured Item 5</h5>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur explicabo ea exercitationem obcaecati eveniet veniam voluptatibus quaerat rerum, dolore nulla, beatae quam aut excepturi. Nobis, itaque exercitationem! Cumque dolorum ad, alias aliquam quasi nam maxime perspiciatis modi asperiores rem ipsa.</p>
-                            </div>
-                        </div>
-                        </div>
-                        <a className="carousel-control-prev" href="#featured" role="button" data-slide="prev">
-                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span className="sr-only">Previous</span>
-                        </a>
-                        <a className="carousel-control-next" href="#featured" role="button" data-slide="next">
-                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span className="sr-only">Next</span>
-                        </a>
+                    <div className="bottom_spacing">
+                        <Carousel id="featured" className="carousel slide box_shadow" data-ride="carousel"
+                            activeIndex={activeIndex}
+                            next={this.next}
+                            previous={this.previous}
+                        >
+                            <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
+                            {slides}
+                            <CarouselControl direction='prev' directionText='Previous' onClickHandler={this.previous} />
+                            <CarouselControl direction='next' directionText='Next' onClickHandler={this.next} />
+                        </Carousel>
                     </div>
-                </div>
 
-                <div className="container bottom_spacing">
-                <div className="row blue_text">
-                    <div className="col-12 center">
-                    <h1>Are You Hungry Yet?</h1>
+                    <div className="container bottom_spacing">
+                        <div className="row blue_text">
+                            <div className="col-12 center">
+                            <h1>Are You Hungry Yet?</h1>
+                            </div>
+                            <div className="col-12 center">
+                            <p>Good! Now check out what's on the menu.</p>
+                            </div>
+                            <div className="col-12 center">
+                            <Button type="button" className="button" href="menu.html">Menu</Button>
+                            </div>
+                        </div>
                     </div>
-                    <div className="col-12 center">
-                    <p>Good! Now check out what's on the menu.</p>
-                    </div>
-                    <div className="col-12 center">
-                    <a type="button" className="button" href="menu.html">Menu</a>
-                    </div>
-                </div>
-                </div>
+                </Container>
             </>
         );
     }

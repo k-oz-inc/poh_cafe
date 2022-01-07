@@ -3,11 +3,11 @@ import Home from './Home';
 import Menu from './Menu';
 import Shop from './Shop';
 import Contact from './Contact';
+import './Main.css';
 
 function Main() {
     return (
       <>
-        <p>MAIN COMPONENT: The body information goes here</p>
         <Home />
         <Menu />
         <Shop />

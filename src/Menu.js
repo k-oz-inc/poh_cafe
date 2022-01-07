@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import menuImage1 from './images/toa-heftiba-unsplash.jpg';
+import { Collapse } from 'reactstrap';
 import './Menu.css';
 
 
@@ -13,10 +15,183 @@ class Menu extends Component {
     render() {
         return (
             <>
-                <br /><h2 className="center">This is the menu component</h2>
+                <div className="container bottom_spacing">
+                    <div className="row border_radius_all  bottom_spacing m-0 white_bg box_shadow">
+                        <div className="col-12 main_color">
+                        <h3 className="top_spacing">Breakfast</h3>
+                        <ul className="list-group list-group-flush bg-transparent">
+                            <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
+                                <a className="btn pl-0 mx-0" data-toggle="collapse" href="#collapseItem1" role="button" aria-expanded="false" aria-controls="collapseItem1">
+                                <span id="arrow">➤</span> Cras justo odio
+                                </a>
+                                <Collapse className="collapse" id="collapseItem1">
+                                <div className="card card-body bg-transparent">
+                                    <img className="menu_thumbnail  d-none d-lg-block border_radius_thumbnail" src={menuImage1} alt="Breakfast Thumbnail" />
+                                </div>
+                                </Collapse>
+                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <span className="badge">$14</span>
+                            </li>
+                            <li className="list-group-item d-flex justify-content-between bg-transparent">
+                                Dapibus ac facilisis in
+                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <span className="badge">$11</span>
+                            </li>
+                            <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
+                                Morbi leo risus
+                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <span className="badge">$13</span>
+                            </li>
+                            <li className="list-group-item d-flex justify-content-between bg-transparent">
+                                Porta ac consectetur ac
+                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <span className="badge">$9</span>
+                            </li>
+                            <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
+                                Vestibulum at eros
+                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <span className="badge">$10</span>
+                            </li>
+                            <li className="list-group-item d-flex justify-content-between bg-transparent">
+                                Porta ac consectetur ac
+                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <span className="badge">$11</span>
+                            </li>
+                            <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
+                                Vestibulum at eros
+                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <span className="badge">$9</span>
+                            </li>
+                        </ul>
+                        </div>
+
+                        <div className="col-12 main_color">
+                        <h3 className="top_spacing">Lunch</h3>
+                        <ul className="list-group list-group-flush bg-transparent">
+                            <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
+                                Cras justo odio
+                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <span className="badge">$7</span>
+                            </li>
+                            <li className="list-group-item d-flex justify-content-between bg-transparent">
+                                Dapibus ac facilisis in
+                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <span className="badge">$13</span>
+                            </li>
+                            <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
+                                Morbi leo risus
+                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <span className="badge">$8</span>
+                            </li>
+                            <li className="list-group-item d-flex justify-content-between bg-transparent">
+                                Porta ac consectetur ac
+                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <span className="badge">$11</span>
+                            </li>
+                            <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
+                                Vestibulum at eros
+                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <span className="badge">$9</span>
+                            </li>
+                            <li className="list-group-item d-flex justify-content-between bg-transparent">
+                                Porta ac consectetur ac
+                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <span className="badge">$11</span>
+                            </li>
+                            <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
+                                Vestibulum at eros
+                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <span className="badge">$9</span>
+                            </li>
+                        </ul>
+                        </div>
+
+                        <div className="col-12 main_color">
+                            <h3 className="top_spacing">Coffees &amp; Drinks</h3>
+                            <ul className="list-group list-group-flush bg-transparent">
+                                <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
+                                Cras justo odio
+                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <span className="badge">$14</span>
+                                </li>
+                                <li className="list-group-item d-flex justify-content-between bg-transparent">
+                                Dapibus ac facilisis in
+                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <span className="badge">$11</span>
+                                </li>
+                                <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
+                                Morbi leo risus
+                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <span className="badge">$13</span>
+                                </li>
+                                <li className="list-group-item d-flex justify-content-between bg-transparent">
+                                Porta ac consectetur ac
+                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <span className="badge">$9</span>
+                                </li>
+                                <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
+                                Vestibulum at eros
+                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <span className="badge">$7</span>
+                                </li>
+                                <li className="list-group-item d-flex justify-content-between bg-transparent">
+                                Cras justo odio
+                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <span className="badge">$13</span>
+                                </li>
+                                <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
+                                Dapibus ac facilisis in
+                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <span className="badge">$11</span>
+                                </li>
+                                <li className="list-group-item d-flex justify-content-between bg-transparent">
+                                Morbi leo risus
+                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <span className="badge">$7</span>
+                                </li>
+                                <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
+                                Vestibulum at eros
+                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <span className="badge">$11</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div className="col-12 main_color">
+                        <h3 className="top_spacing">Bowls</h3>
+                        <ul className="list-group list-group-flush bg-transparent">
+                            <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
+                                Cras justo odio
+                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <span className="badge">$9</span>
+                            </li>
+                            <li className="list-group-item d-flex justify-content-between bg-transparent">
+                                Dapibus ac facilisis in
+                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <span className="badge">$11</span>
+                            </li>
+                            <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
+                                Morbi leo risus
+                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <span className="badge">$8</span>
+                            </li>
+                            <li className="list-group-item d-flex justify-content-between bg-transparent">
+                                Porta ac consectetur ac
+                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <span className="badge">$10</span>
+                            </li>
+                            <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
+                                Vestibulum at eros
+                                <div className="col-6 col-lg-8 center"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
+                                <span className="badge">$7</span>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
             </>
         );
-    }
+    };
 }
 
 export default Menu;

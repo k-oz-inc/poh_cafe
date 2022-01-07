@@ -14,7 +14,7 @@ function Footer() {
       <footer className="">
         <Container fluid className="">
           <Row>
-            <Col className="main_bg">
+            <Col className="col-12 col-md-2 d-flex align-items-center pt-3 pt-m-o main_bg">
               <div className="my-auto">
                 <h3 class="third_color">Links</h3>
                 <ul className="footer_links pl-2">
@@ -26,7 +26,7 @@ function Footer() {
                 </ul>
               </div>
             </Col>
-            <Col className="col-md-8 h-100 d-flex align-items-center center py-0 third_bg main_color">
+            <Col className="col-12 col-md-8 h-100 d-flex align-items-center center py-0 third_bg main_color">
               <div>
                 <div class="col-12 center">
                   <img className="footer_logo" src={logo2} alt="PoH Cafe Logo" />
@@ -42,10 +42,10 @@ function Footer() {
                   <a href="#" alt="Facebook Link Icon" target="_blank"><i class="fab fa-facebook social_icon"></i></a>
                   <a href="#" alt="Twitter Link Icon" target="_blank"><i class="fab fa-twitter social_icon"></i></a>
                 </div>
-                <small class="col-12">Copyrights ©2021. All rights reserved.</small>
+                <small class="col-12">Copyrights ©{new Date().getFullYear()}. All rights reserved.</small>
               </div>
             </Col>
-            <Col className=""></Col>
+            <Col className="col-md-2"></Col>
           </Row>
         </Container>
       </footer>
