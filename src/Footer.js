@@ -11,7 +11,7 @@ import './Footer.css';
 
 function Footer() {
     return (
-      <footer className="">
+      <footer className="footer">
         <Container fluid className="">
           <Row>
             <Col className="col-12 col-md-2 d-flex align-items-center pt-3 pt-m-o main_bg">

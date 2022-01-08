@@ -15,6 +15,15 @@
     color: white;
 }
 
+.info_card a {
+    color: inherit;
+}
+
+.info_card a:hover {
+    color: #EE6A59;
+    text-shadow: 2px 2px black;
+}
+
 .info_card {
     color: white;
     position: absolute;

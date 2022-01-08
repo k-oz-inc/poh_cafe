@@ -5,6 +5,15 @@
     margin: 0;
 }
 
+.footer a {
+    color: inherit;
+}
+
+.footer a:hover {
+    color: #ECE6CD;
+    text-shadow: 2px 2px black;
+}
+
 .main_color {
     color: #242E3E;
 }

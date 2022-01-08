@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import menuImage1 from './images/toa-heftiba-unsplash.jpg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Collapse, Card, CardBody } from 'reactstrap';
 import './Menu.css';
 
