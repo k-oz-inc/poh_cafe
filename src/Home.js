@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import './Home.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
 Container,
 Row,
 Col,
 Button,
-Collapse,
 Carousel,
 CarouselItem,
 CarouselControl,
@@ -19,6 +17,7 @@ import carouselImage2 from './images/nathan-dumlao-unsplash2.jpg';
 import carouselImage3 from './images/carissa-gan-unsplash.jpg';
 import carouselImage4 from './images/christine-von-unsplash.jpg';
 import carouselImage5 from './images/toa-heftiba-unsplash.jpg';
+import './Home.css';
 
 //Carousel by @bit with some slight modifications
 const items = [
@@ -139,7 +138,7 @@ class Home extends Component {
                             <p>Good! Now check out what's on the menu.</p>
                             </div>
                             <div className="col-12 center">
-                            <Button type="button" className="button" href="menu.html">Menu</Button>
+                            <Button className="button" href="menu.html">Menu</Button>
                             </div>
                         </div>
                     </div>

@@ -17,7 +17,7 @@ class Menu extends Component {
         return (
             <>
                 <div className="container bottom_spacing">
-                    <div className="row border_radius_all  bottom_spacing m-0 white_bg box_shadow">
+                    <div className="row border_radius_right bottom_spacing m-0 white_bg box_shadow">
                         <div className="col-12 main_color">
                         <h3 className="top_spacing">Breakfast</h3>
                         <ul className="list-group list-group-flush bg-transparent">

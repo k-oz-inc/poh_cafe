@@ -4,3 +4,23 @@
     align-items: center;
     margin: 0;
 }
+
+.box_shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.border_radius_right {
+    border-radius: 0 50px 0 0;  
+}
+
+.border_radius_both {
+    border-radius: 50px 50px 0 0; 
+}
+
+.border_radius_both_b {
+    border-radius: 0 0 50px 50px; 
+}
+
+.border_radius_all {
+    border-radius: 50px ; 
+}
