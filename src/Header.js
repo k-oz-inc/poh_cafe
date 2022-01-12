@@ -2,30 +2,28 @@ import React, { Component } from 'react';
 import logo from './images/PoH_Logo.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  Nav,
-  NavItem,
-  NavLink,
-  Jumbotron,
+Collapse,
+Nav,
+Navbar,
+NavbarToggler,
+NavItem,
+Jumbotron,
 Container,
 Row,
-Col,
-// Button
+Col
 } from 'reactstrap';
 import './Header.css';
+import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
     constructor(props) {
-        super(props);
 
+        super(props);
         this.state = {
             isNavOpen: false,
         };
 
         this.toggleNav = this.toggleNav.bind(this);
-
     }
 
     toggleNav() {
@@ -36,14 +34,14 @@ class Header extends Component {
 
     render() {
         return (
-          <React.Fragment>
+            <React.Fragment>
                 <Jumbotron className="jumbotron" fluid>
                     
                     <Navbar dark className="navbar-nav navbar-dark" fixed="top" expand="md">
-                        <div className="container d-flex justify-content-around">
-                            <div className="row">
-                                <div className="col-12">
-                                <NavbarToggler onClick={this.toggleNav} />
+                        <Container className="d-flex justify-content-around">
+                            <Row>
+                                <Col className="col-12">
+                                    <NavbarToggler onClick={this.toggleNav} />
                                     <Collapse isOpen={this.state.isNavOpen} navbar>
                                         <Nav navbar className="align-items-center">
                                             <NavItem>
@@ -67,25 +65,41 @@ class Header extends Component {
                                                 </NavLink>
                                             </NavItem>
                                         </Nav>
+                                        <Container className="d-block d-md-none">
+                                            <hr className="h_ruler" />
+                                            <Row className="togglerInfo">
+                                                <Col className="col-12 center">
+                                                    <a href="#"><i class="fas fa-map-marker-alt social_icon"></i></a>
+                                                </Col>
+                                                <Col className="col-12 center">1155 Heavenly Drive</Col>
+                                                <Col className="col-12 center">New York, NY</Col>
+                                                <Col className="col-12 center">Tel. 212-555-5555</Col>
+                                                <Col className="col-12 center mb-2">
+                                                    <a href="#" alt="Instagram Link Icon" target="_blank"><i class="fab fa-instagram social_icon"></i></a>
+                                                    <a href="#" alt="Facebook Link Icon" target="_blank"><i class="fab fa-facebook social_icon"></i></a>
+                                                    <a href="#" alt="Twitter Link Icon" target="_blank"><i class="fab fa-twitter social_icon"></i></a>
+                                                </Col>
+                                            </Row>
+                                        </Container>
                                     </Collapse>
-                                </div>
-                            </div>
-                        </div>
+                                </Col>
+                            </Row>
+                        </Container>
                     </Navbar>
                     <div className="overlay">
-                    <Container>
-                        <Row>
-                            <Col className="d-flex justify-content-center">
-                                <img className="logo img-fluid" src={logo} alt="PoH Cafe Logo" />
-                            </Col>
-                            <Col className="col-12">
-                                <h2 className="slogan center mt-2">It's a Taste of Heaven!</h2>
-                            </Col>
-                        </Row>
-                    </Container>
+                        <Container>
+                            <Row>
+                                <Col className="d-flex justify-content-center">
+                                    <img className="logo img-fluid" src={logo} alt="PoH Cafe Logo" />
+                                </Col>
+                                <Col className="col-12">
+                                    <h2 className="slogan center mt-2">It's a Taste of Heaven!</h2>
+                                </Col>
+                            </Row>
+                        </Container>
                     </div>
                 </Jumbotron>
-                <Container className="d-none d-lg-block info_card pb-2">
+                <Container className="d-none d-md-block info_card pb-2">
                     <Row className="">
                         <Col className="col-12 center">
                             <a href="#"><i className="fas fa-map-marker-alt social_icon"></i></a>
@@ -100,7 +114,7 @@ class Header extends Component {
                         </Col>
                     </Row>
                 </Container>
-          </React.Fragment>
+            </React.Fragment>
         );
     }
 }

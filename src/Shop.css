@@ -5,6 +5,10 @@
     margin: 0;
 }
 
+.shopTitle {
+    color: #242E3E;
+}
+
 .cardBorder {
     border: 0;
     border-radius: 20px 20px 20px 20px; 

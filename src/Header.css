@@ -15,12 +15,31 @@
     color: white;
 }
 
+.togglerInfo {
+    color: white;
+}
+
+.togglerInfo a {
+    color: #EE6A59;
+}
+
+.togglerInfo a:hover {
+    color: #D3D3D3;
+    text-shadow: 2px 2px black;
+}
+
+.h_ruler {
+    height: 1px;
+    background-color: #EE6A59;
+    border: none;
+}
+
 .info_card a {
-    color: inherit;
+    color: #EE6A59;
 }
 
 .info_card a:hover {
-    color: #EE6A59;
+    color: #D3D3D3;
     text-shadow: 2px 2px black;
 }
 

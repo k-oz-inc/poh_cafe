@@ -99,7 +99,7 @@ class Shop extends Component {
     render() {
         return (
             <>
-                <br /><h3 className="center mb-3">Shop the top international coffee</h3>
+                <br /><h3 className="shopTitle center mt-md-5 mb-3">Shop the top international coffee beans</h3>
                 <Container>
                     <Row>
                         {this.cardInfo.map(this.renderCard)} 

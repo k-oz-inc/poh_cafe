@@ -18,6 +18,7 @@ import carouselImage3 from './images/carissa-gan-unsplash.jpg';
 import carouselImage4 from './images/christine-von-unsplash.jpg';
 import carouselImage5 from './images/toa-heftiba-unsplash.jpg';
 import './Home.css';
+import { Link } from 'react-router-dom';
 
 //Carousel by @bit with some slight modifications
 const items = [
@@ -138,7 +139,9 @@ class Home extends Component {
                             <p>Good! Now check out what's on the menu.</p>
                             </div>
                             <div className="col-12 center">
-                            <Button className="button" href="menu.html">Menu</Button>
+								<Link to='/menu'>
+                            	<Button className="button">Menu</Button>
+								</Link>
                             </div>
                         </div>
                     </div>
