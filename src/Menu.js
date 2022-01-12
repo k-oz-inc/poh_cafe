@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
 import menuImage1 from './images/toa-heftiba-unsplash.jpg';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Row, Col, Collapse, Card, CardBody } from 'reactstrap';
+import { Container, Row, Col, Collapse, Card, CardBody, Button } from 'reactstrap';
 import './Menu.css';
 
 
 class Menu extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            
-        }
+        
+        this.toggle = this.toggle.bind(this);
+        this.state = { collapse: false };
     }
+
+    toggle() {
+        this.setState({ collapse: !this.state.collapse });
+      }
 
     render() {
         return (
@@ -22,15 +26,15 @@ class Menu extends Component {
                         <h3 className="mt-3 mt-md-5">Breakfast</h3>
                         <ul className="list-group list-group-flush bg-transparent">
                             <li className="list-group-item d-flex justify-content-between list-group-item-secondary">
-                                <a className="btn pl-0 mx-0" data-toggle="collapse" href="#collapseItem1" role="button" aria-expanded="false" aria-controls="collapseItem1">
-                                <span id="arrow">➤</span> Cras justo odio
+                                <a className="btn pl-0 mx-0" onClick={this.toggle} style={{ marginBottom: '1rem' }}>
+                                    <span id="arrow">➤</span> Cras justo odio
                                 </a>
-                                <Collapse className="collapse" id="collapseItem1">
-                                <Card>   
-                                <CardBody className="bg-transparent">
-                                    <img className="menu_thumbnail  d-none d-lg-block border_radius_thumbnail" src={menuImage1} alt="Breakfast Thumbnail" />
-                                </CardBody>
-                                </Card> 
+                                <Collapse isOpen={this.state.collapse} id="collapseItem1">
+                                    <Card>   
+                                        <CardBody className="bg-transparent">
+                                            <img className="menu_thumbnail  d-none d-lg-block border_radius_thumbnail" src={menuImage1} alt="Breakfast Thumbnail" />
+                                        </CardBody>
+                                    </Card> 
                                 </Collapse>
                                 <div className="col-6 col-lg-8 center"><small className="flex d-none d-md-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small></div>
                                 <span className="badge">$14</span>

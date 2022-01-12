@@ -24,3 +24,12 @@
 .border_radius_all {
     border-radius: 50px ; 
 }
+
+.menu_thumbnail {
+    width: 200px;
+    height: auto;
+}
+
+.border_radius_thumbnail {
+    border-radius: 20px ; 
+}

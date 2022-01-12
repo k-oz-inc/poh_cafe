@@ -52,15 +52,10 @@ class Main extends Component {
           <Route path="/menu" component={MenuPage} />
           <Route path="/shop" component={ShopPage} />
           <Route path="/contact" component={ContactPage} />
-          {/* <Route exact path='/directory' render={() => <Directory campsites={this.state.campsites} />} /> */}
-          <Redirect to='/menu' />
+          {/* <Route exact path='/somepath' render={() => <SomeComponet someproperty={this.state.somevariable} />} /> */}
+          <Redirect to='/home' />
         </Switch>
         <Footer />
-
-        {/* <Home />
-        <Menu />
-        <Shop />
-        <Contact /> */}
       </>
     );
   }
