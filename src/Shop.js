@@ -9,9 +9,7 @@ Card,
 CardBody,
 CardImg,
 CardTitle,
-CardSubtitle,
-CardText,
-Collapse,
+CardText
 } from 'reactstrap';
 import './Shop.css';
 import productImage from './images/coffee-bag-logo.jpg';

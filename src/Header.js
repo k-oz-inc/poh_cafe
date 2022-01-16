@@ -43,7 +43,7 @@ class Header extends Component {
                                 <Col className="col-12">
                                     <NavbarToggler onClick={this.toggleNav} />
                                     <Collapse isOpen={this.state.isNavOpen} navbar>
-                                        <Nav onClick={this.toggleNav} navbar className="align-items-center">
+                                        <Nav navbar className="align-items-center">
                                             <NavItem>
                                                 <NavLink active className="nav-link m-2" to="/home">
                                                 Home
